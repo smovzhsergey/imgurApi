@@ -1,0 +1,93 @@
+header a.logo {
+  color: #7ebe46;
+  font-size: 3em; }
+  header a.logo:hover, header a.logo:visited, header a.logo:focus {
+    text-decoration: none;
+    color: #7ebe46; }
+  header a.logo img {
+    margin-right: 15px; }
+
+header nav {
+  margin: 20px 0;
+  padding: 10px 0;
+  border-top: 2px solid #7ebe46;
+  border-bottom: 2px solid #7ebe46; }
+  header nav:after {
+    content: "";
+    clear: both;
+    display: block; }
+  header nav .nav a,
+  header nav .nav a.active {
+    color: #444;
+    padding: 0;
+    margin: 15px; }
+    header nav .nav a:hover, header nav .nav a:visited, header nav .nav a:focus,
+    header nav .nav a.active:hover,
+    header nav .nav a.active:visited,
+    header nav .nav a.active:focus {
+      text-decoration: none;
+      background: transparent;
+      color: #444; }
+  header nav .nav a.active {
+    font-weight: 600;
+    position: relative; }
+    header nav .nav a.active:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: #444;
+      position: absolute; }
+
+.image-detail .panel-body {
+  text-align: center; }
+
+.image-detail img, .image-detail video {
+  max-width: 100%; }
+
+.image-preview {
+  display: inline-block;
+  position: relative; }
+  .image-preview .inset {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    opacity: .7; }
+  .image-preview .glyphicon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    opacity: .5;
+    color: white; }
+  .image-preview img {
+    height: 200px;
+    width: 200px;
+    display: inline-block; }
+  .image-preview video {
+    height: 200px;
+    width: 200px;
+    vertical-align: middle;
+    background-color: black; }
+
+body {
+  background-color: #fff;
+  color: #333; }
+
+.black {
+  color: black; }
+
+.topic {
+  text-align: center; }
+  .topic .image-preview {
+    animation: fadein .65s ease-out; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
