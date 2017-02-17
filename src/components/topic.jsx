@@ -3,6 +3,7 @@ var Actions = require('../actions');
 var ImageStore = require('../stores/image-store');
 var Reflux = require('reflux');
 var ImagePreview = require('./image-preview');
+var Nav = require('./nav');
 
 module.exports = React.createClass({
   mixins: [
@@ -22,10 +23,13 @@ module.exports = React.createClass({
 
   render: function() {
       var topicHead = this.props.params.id.replace(/_/g, " ");
-      return <div className="topic">
-        <h2>Images categorized as {topicHead} </h2>
-        {this.renderImages()}
-      </div>
+      return <div>
+            <Nav />
+            <div className="topic">
+                <h2>Images categorized as {topicHead} </h2>
+                {this.renderImages()}
+            </div>
+        </div>
   },
   renderImages: function() {
 

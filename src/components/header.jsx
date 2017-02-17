@@ -29,10 +29,9 @@ module.exports = React.createClass({
             />
             imgur api
           </Link>
-
-          <Nav />
-      </div>
-    </header>);
+        </div>
+      </header>
+    );
   },
 
   onChange: function(event, topics) {

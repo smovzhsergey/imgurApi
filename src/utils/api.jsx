@@ -13,7 +13,6 @@ module.exports = {
                 return response.json()
             })
 
-            console.log(respons);
     }
 
 };

@@ -1,37 +1,49 @@
-header a.logo {
-  color: #7ebe46;
-  font-size: 3em; }
-  header a.logo:hover, header a.logo:visited, header a.logo:focus {
-    text-decoration: none;
-    color: #7ebe46; }
-  header a.logo img {
-    margin-right: 15px; }
+body {
+  background-color: #fff;
+  color: #333; }
 
-header nav {
+h1,
+h2,
+h3,
+h4 {
+  text-align: center; }
+
+header {
+  padding: 15px 0 0; }
+  header a.logo {
+    color: #7ebe46;
+    font-size: 3em; }
+    header a.logo:hover, header a.logo:visited, header a.logo:focus {
+      text-decoration: none;
+      color: #7ebe46; }
+    header a.logo img {
+      margin-right: 15px; }
+
+nav {
   margin: 20px 0;
   padding: 10px 0;
   border-top: 2px solid #7ebe46;
   border-bottom: 2px solid #7ebe46; }
-  header nav:after {
+  nav:after {
     content: "";
     clear: both;
     display: block; }
-  header nav .nav a,
-  header nav .nav a.active {
+  nav .nav a,
+  nav .nav a.active {
     color: #444;
     padding: 0;
     margin: 15px; }
-    header nav .nav a:hover, header nav .nav a:visited, header nav .nav a:focus,
-    header nav .nav a.active:hover,
-    header nav .nav a.active:visited,
-    header nav .nav a.active:focus {
+    nav .nav a:hover, nav .nav a:visited, nav .nav a:focus,
+    nav .nav a.active:hover,
+    nav .nav a.active:visited,
+    nav .nav a.active:focus {
       text-decoration: none;
       background: transparent;
       color: #444; }
-  header nav .nav a.active {
+  nav .nav a.active {
     font-weight: 600;
     position: relative; }
-    header nav .nav a.active:after {
+    nav .nav a.active:after {
       content: '';
       display: block;
       width: 100%;
@@ -39,7 +51,23 @@ header nav {
       background: #444;
       position: absolute; }
 
-.image-detail .panel-body {
+a.categories {
+  color: #444;
+  display: block;
+  width: 47%;
+  float: left;
+  padding: 10px 1%;
+  margin: 10px 1.5%;
+  text-align: center;
+  background: #ddd;
+  text-decoration: none;
+  transition: all 0.5s; }
+  a.categories:hover {
+    background: #ddeee6;
+    color: #7ebe46;
+    box-shadow: inset 2px 2px 8px 0px rgba(0, 0, 0, 0.1), inset -2px -2px 8px 0px rgba(0, 0, 0, 0.1); }
+
+.image-container {
   text-align: center; }
 
 .image-detail img, .image-detail video {
@@ -47,7 +75,8 @@ header nav {
 
 .image-preview {
   display: inline-block;
-  position: relative; }
+  position: relative;
+  margin: 20px; }
   .image-preview .inset {
     position: absolute;
     bottom: 5px;
@@ -73,10 +102,6 @@ header nav {
     width: 200px;
     vertical-align: middle;
     background-color: black; }
-
-body {
-  background-color: #fff;
-  color: #333; }
 
 .black {
   color: black; }

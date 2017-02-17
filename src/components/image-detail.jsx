@@ -4,6 +4,7 @@ var ImageStore = require('../stores/image-store');
 var CommentStore = require('../stores/comment-store');
 var Actions = require('../actions');
 var CommentBox = require('./comment-box');
+var Nav = require('./nav');
 
 module.exports = React.createClass({
   mixins: [
@@ -26,16 +27,12 @@ module.exports = React.createClass({
   },
   renderContent: function() {
     return <div>
-      <div className="panel panel-default">
-        <div className="panel-heading">
-          <h4>{this.state.image.title}</h4>
-        </div>
-        <div className="panel-body">
-          {this.renderImage()}
-        </div>
-        <div className="panel-footer">
-          <h5>{this.state.image.description}</h5>
-        </div>
+      <Nav />
+      <div className = 'image-container'>
+        <h3>{this.state.image.title}</h3>
+        {this.renderImage()}
+        <h5>Views: {this.state.image.views}  |  Upvotes: {this.state.image.ups}</h5>
+
       </div>
       <h3>Comments</h3>
       {this.renderComments()}

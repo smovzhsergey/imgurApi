@@ -18,8 +18,9 @@ module.exports = React.createClass({
     Actions.getTopics();
   },
   render: function() {
-    return <div className="list-group">
-      {this.renderTopics()}
+    return <div>
+        <h2>Categories</h2>
+        {this.renderTopics()}
     </div>
   },
   renderTopics: function() {
@@ -28,13 +29,10 @@ module.exports = React.createClass({
           topic.url = topic.name.replace(/\s/g, "_");
         else
           topic.url = topic.name;
-
-        return <Link to={"topics/" + topic.url} className="list-group-item" key={topic.id}>
-
-        <h4>{topic.name}</h4>
-        <p>{topic.description}</p>
-
-      </Link>
+        return <Link to={"topics/" + topic.url} className="categories" key={topic.id}>
+            <h3>{topic.name}</h3>
+            <p>{topic.description}</p>
+          </Link>
     });
   },
   onChange: function(event, topics) {
